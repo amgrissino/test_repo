@@ -1,0 +1,454 @@
+NetApp HCI Release Notes Version 1.3
+====================================
+NetApp Information Engineering
+
+[[titlepage.html]]
+
+[[titlepage.html#booklibrary]]
+NetApp HCI
+
+[[titlepage.html#mainbooktitle]]
+Release Notes
+
+[[titlepage.html#subtitle]]
+Version 1.3
+
+[[titlepage.html#coverstamp]][[titlepage.html#pagestamp]]Part number:
+[[titlepage.html#bookpartno]]215-13206_A0_ur001
+
+[[titlepage.html#edition]]
+June 2018
+
+[[titlepage.html#footerinfo]]
+Copyright © 2018 NetApp, Inc. All rights reserved. +
+Web: http://www.netapp.com[www.netapp.com] +
+Feedback:
+mailto:doccomments@netapp.com?Subject=NetApp%20Documentation%20Feedback[doccomments@netapp.com]
+
+[[GUID-686C41A3-88F8-448D-9C75-D582DBD84A6D_d65.html]]
+
+Chapter 1. Introduction
+-----------------------
+
+These release notes describe NetApp HCI 1.3. This document provides
+information about enhancements, resolved and known issues, and changes
+in this release.
+
+NetApp HCI provides both storage and compute resources, combining them
+to build a VMware vSphere environment backed by the capabilities of
+NetApp SolidFire Element OS. The solution combines storage and compute
+hardware in a single chassis. For an overview of the components of
+NetApp HCI, see the NetApp HCI Deployment Guide.
+
+You can quickly deploy and configure your fully racked and powered
+NetApp HCI system using the NetApp Deployment Engine web interface.
+
+[[GUID-2B8C01A1-F3E4-402D-9697-4CD20E2753EA_d66.html]]
+
+Chapter 2. What's new in this release
+-------------------------------------
+
+NetApp HCI 1.3 brings fixes as well as the following new functionality:
+
+[[GUID-2B8C01A1-F3E4-402D-9697-4CD20E2753EA_d66.html#GUID-2B8C01A1-F3E4-402D-9697-4CD20E2753EA__SECTION_76B9820E93E640CE90E05549CF0130AF]]
+Data at Rest Encryption for NetApp HCI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+NetApp HCI now supports Data at Rest Encryption for the H-Series
+platform with self-encrypting SSD drives. Data at Rest Encryption can be
+enabled at the storage cluster level in the vSphere Web Client or
+Element OS UI. When enabled, all virtual machine datastores and other
+volumes on the storage cluster are encrypted.
+
+[[GUID-2B8C01A1-F3E4-402D-9697-4CD20E2753EA_d66.html#GUID-2B8C01A1-F3E4-402D-9697-4CD20E2753EA__SECTION_5D1C22E9B0704581A54E3D3ED186CF93]]
+Auto-discovery of NetApp HCI nodes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you install new NetApp HCI nodes, the nodes automatically configure
+IPv4 addresses and are discoverable for deployment on the storage
+network without the need for manual IPv4 address configuration or DHCP.
+For new NetApp HCI deployments, only one storage node requires an IPv4
+address (assigned statically or with DHCP) to access the NetApp
+Deployment Engine. See Deploying NetApp HCI 1.3 in the
+http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center]
+for more information.
+
+[[GUID-2B8C01A1-F3E4-402D-9697-4CD20E2753EA_d66.html#GUID-2B8C01A1-F3E4-402D-9697-4CD20E2753EA__SECTION_EBAEE821E4784E24868BD6D7666CA342]]
+Expansion of existing NetApp HCI installations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To scale your compute and storage pools, you can now expand an existing
+NetApp HCI installation by adding compute or storage nodes. You can
+install the new nodes with a familiar user interface. See Deploying
+NetApp HCI 1.3 in the http://docs.netapp.com/hci/index.jsp[NetApp HCI
+Documentation Center] for more information.
+
+[[GUID-AD8FE093-C08B-4EF0-BD0E-31764E940417_d67.html]]
+
+Chapter 3. NetApp HCI related documentation
+-------------------------------------------
+
+The following documents provide essential information about NetApp HCI.
+
+[[GUID-AD8FE093-C08B-4EF0-BD0E-31764E940417_d67.html#GUID-AD8FE093-C08B-4EF0-BD0E-31764E940417__GUID-D398EDB1-6B3B-41A0-B7F5-449D9C7F2CE4]]
+You can find these documents on the NetApp Support Site.
+
+[cols=",,",options="header",]
+|=======================================================================
+|Document |Focus |Description
+|NetApp HCI Release Notes |NetApp HCI version release information
+|Describes NetApp HCI features, system capabilities, and requirements
+for the latest version.
+
+|NetApp H-Series Installation and Setup Instructions |Hardware
+installation and setup |A quick start guide for hardware installation
+provided in the product box.
+
+|NetApp HCI Rail Kit Installation Flyer |Hardware installation and setup
+|A quick start guide for installation of the rails into a four-post
+rack.
+
+|NetApp HCI Deployment Guide |Deployment |Describes the NetApp HCI
+deployment process and its requirements. It also contains descriptions
+of system architecture and features, including Active IQ and alert
+monitoring management.
+
+|NetApp HCI File Services Powered by ONTAP Select Quick Start Guide
+|Advanced storage operations |Describes how to configure NetApp HCI File
+Services powered by ONTAP Select during the NetApp HCI deployment
+process.
+
+|NetApp SolidFire Plug-in for VMware vCenter Server Web Client Release
+Notes |System management |Describes the latest features and updates to
+the tool for managing NetApp HCI resources within vCenter.
+
+|NetApp SolidFire Plug-in for VMware vCenter Server Web Client User
+Guide |System management |Describes the tool for managing NetApp HCI
+resources within vCenter.
+
+|NetApp SolidFire Element OS User Guide |Advanced storage operations
+|Describes SolidFire storage management using the Element OS Web user
+interface. Some advanced operations that cannot be performed with
+vCenter Plug-in can be performed from the Element OS Web UI. This
+document also describes how to install a management node.
+
+|NetApp SolidFire Element OS API Reference Guide |Advanced storage
+operations |Describes SolidFire storage management using Element OS
+APIs. Some advanced operations that cannot be performed with vCenter
+Plug-in can be performed using Element OS APIs.
+
+|Replacing a Solid-State Disk Drive for a NetApp HCI H-Series Storage
+Node |Hardware maintenance |Describes how to replace a failed
+solid-state disk (SSD) drive for an H-Series storage node.
+
+|Replacing a Failed Storage Node in a NetApp HCI H-Series Chassis
+|Hardware maintenance |Describes how to replace a failed storage node in
+an H-Series chassis.
+
+|Replacing a Failed Compute Node in a NetApp HCI H-Series Chassis
+|Hardware maintenance |Describes how to replace a failed compute node in
+an H-Series chassis.
+
+|Replacing a Failed Power Supply Unit in a NetApp HCI H-Series Chassis
+|Hardware maintenance |Describes how to replace a failed power supply
+unit in an H-Series chassis.
+
+|Replacing a Failed NetApp HCI H-Series Chassis |Hardware maintenance
+|Describes how to replace a failed H-Series chassis.
+|=======================================================================
+
+[[GUID-1682C011-0EF9-494E-9B58-35079E8118ED_d68.html]]
+
+Chapter 4. Interoperability information
+---------------------------------------
+
+You can use the Interoperability Matrix Tool (IMT) to see
+interoperability and qualified ecosystem information for NetApp HCI.
+
+[[GUID-1682C011-0EF9-494E-9B58-35079E8118ED_d68.html#GUID-1682C011-0EF9-494E-9B58-35079E8118ED__GUID-4980F2F3-1F19-4D1F-8D8E-8551CF35EEA3]]
+Supported software components
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The IMT enables you to search for information about NetApp HCI
+interoperability with third-party hardware and software products, as
+well as interoperability between different versions of components of
+NetApp HCI (such as Element OS). You can find the IMT on the
+https://mysupport.netapp.com/matrix/#welcome[NetApp Support Site].
+
+NetApp ONTAP Select is an optional service provided with NetApp HCI. The
+version of ONTAP Select deployed with NetApp HCI is compatible with the
+following versions of VMware ESXi software:
+
+* [[GUID-1682C011-0EF9-494E-9B58-35079E8118ED_d68.html#GUID-1682C011-0EF9-494E-9B58-35079E8118ED__LI_91E8A26F643A454F8DF520239134E15E]]VMware
+ESXi 6.0 (Update 3a)
+* [[GUID-1682C011-0EF9-494E-9B58-35079E8118ED_d68.html#GUID-1682C011-0EF9-494E-9B58-35079E8118ED__LI_E8D0497D5D6B403E84C927BEA01482BB]]VMware
+ESXi 6.5 (Update 1)
+
+If you upgrade VMware ESXi or ONTAP Select independently of NetApp HCI,
+use the https://mysupport.netapp.com/matrix/#welcome[IMT] to ensure that
+all versions of software are compatible.
+
+[[GUID-1682C011-0EF9-494E-9B58-35079E8118ED_d68.html#GUID-1682C011-0EF9-494E-9B58-35079E8118ED__SECTION_1A9FFD1E845946069A2DCBEC47DD71C0]]
+Open storage model
+~~~~~~~~~~~~~~~~~~
+
+NetApp HCI storage running Element OS 10.x supports iSCSI connections
+from a wide range of storage clients. See the
+https://mysupport.netapp.com/matrix/#welcome[IMT] for a full list of
+supported storage clients.
+
+[[GUID-06A7E597-EC94-4E81-97F3-C4D13E72E0A5_d69.html]]
+
+Chapter 5. Specifications
+-------------------------
+
+You can find specifications for this product in the NetApp HCI marketing
+material.
+
+For detailed capabilities of each component of NetApp HCI, see the
+NetApp HCI http://www.netapp.com/us/media/ds-3881.pdf[datasheet].
+
+[[GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html]]
+
+Chapter 6. VMware vSphere support
+---------------------------------
+
+NetApp HCI makes use of the vCenter component of VMware vSphere to
+manage and monitor the ESXi hypervisor installed on each compute node.
+The NetApp Deployment Engine provides you with the choice of either
+deploying a new vSphere environment or using an existing vSphere
+environment that you have already configured.
+
+[[GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html#GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C__SECTION_5326A3F97FBA46AFB1FB65BD5744D00E]]
+Supported VMware vSphere versions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+NetApp HCI supports the following versions of VMware software:
+
+* [[GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html#GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C__LI_D96EC6121E134DD88DF17AF239C8E910]]VMware
+vSphere 6.0
+** [[GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html#GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C__LI_9A4A521A56034F2AB067E50965299A4A]]VMware
+vCenter Server 6.0 Update 3a build number 5183549 or later
+** [[GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html#GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C__LI_B93E45CD76BA45A2A979D3AB9527FC09]]VMware
+ESXi 6.0 Update 3 build number 5050593
+* [[GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html#GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C__LI_D4A59535DFB944109271E4E6D172068D]]VMware
+vSphere 6.5
+** [[GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html#GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C__LI_9A489FF2918740D0839BDF36FA0A5748]]VMware
+vCenter Server 6.5 Update 1 build number 5973321 or later
+** [[GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html#GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C__LI_C91584E85BF140AFB20101764E96E6AE]]VMware
+ESXi 6.5 Update 1 build number 5969303
+
+[[GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html#GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C__SECTION_218CDBDE07FF4643BD7C7E832A9EBDBB]]
+Joining existing vSphere environments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you join an existing vSphere environment, you need to manually
+install and configure certain software either before you start
+deployment or after deployment is complete. This software is
+automatically installed and configured when you chose to install a new
+vSphere environment during deployment.
+
+NetApp HCI can be connected to an existing vSphere environment; the
+supported vCenter versions are outlined in the preceding section. When
+you join an existing vSphere environment, you need to manually install
+the following software either before or after deployment:
+
+* [[GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html#GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C__LI_E9A20B9EB38643E2BF96956EBC49ADCA]]NetApp
+SolidFire Plugin for VMware vCenter Server Web Client 4.0 or later
+* [[GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html#GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C__LI_DA7B9CE1EB094D7CB41FDC27AAFE7868]]NetApp
+HCI management node
+
+If you choose to join an existing vCenter environment, NetApp HCI
+installs the appropriate version of VMware ESXi on the compute nodes.
+
+[[GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html#GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C__SECTION_652C5582D1F24ECEBB63346D57CC5225]]
+Keeping VMware software up to date
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+After deploying NetApp HCI, you should use VMware vSphere Update Manager
+to apply the latest security patches for vSphere. Use the
+https://mysupport.netapp.com/matrix/#welcome[Interoperability Matrix
+Tool] to ensure that all versions of software are compatible.
+
+See the VMware vSphere Update Manager
+https://www.vmware.com/support/pubs/vum_pubs.html[documentation] for
+more information.
+
+[[GUID-321D66F1-1CDB-4442-A63D-2758409DFFAD_d71.html]]
+
+Chapter 7. Upgrading from previous versions of NetApp HCI
+---------------------------------------------------------
+
+For new deployments of NetApp HCI, you should apply the version 1.3
+software images from the NetApp Support Site before deployment. You can
+keep your system up to date after deployment by upgrading individual
+NetApp HCI software components to the versions shipped with NetApp HCI
+1.3.
+
+Steps
+~~~~~
+
+1.  [[GUID-321D66F1-1CDB-4442-A63D-2758409DFFAD_d71.html#GUID-321D66F1-1CDB-4442-A63D-2758409DFFAD__STEP_9130382675904F7C8FED1C34436E1A47]]Upgrade
+the NetApp HCI management node.
++
+See Deploying NetApp HCI 1.3 in the
+http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center]
+for upgrade instructions.
+2.  [[GUID-321D66F1-1CDB-4442-A63D-2758409DFFAD_d71.html#GUID-321D66F1-1CDB-4442-A63D-2758409DFFAD__STEP_E1AC064CED4644FE981F6B0BE845E4A8]]Upgrade
+the VMware vCenter Plug-in. This ensures you can access the latest
+NetApp HCI features from the vSphere Web Client.
++
+See the NetApp SolidFire vCenter Plug-in User Guide for upgrade
+instructions.
+3.  [[GUID-321D66F1-1CDB-4442-A63D-2758409DFFAD_d71.html#GUID-321D66F1-1CDB-4442-A63D-2758409DFFAD__STEP_8414B0DCAB9249D099C3BD135E808FF2]]Upgrade
+VMware vSphere. This upgrades vCenter as well as the ESXi hosts that are
+part of NetApp HCI.
++
+See link:#GUID-F89B29FD-1E92-4B8C-904A-B02E92470F0C_d70.html[VMware
+vSphere support] for more information on keeping vSphere up to date.
+4.  [[GUID-321D66F1-1CDB-4442-A63D-2758409DFFAD_d71.html#GUID-321D66F1-1CDB-4442-A63D-2758409DFFAD__STEP_864EEF5D9F00482494733F78A1EF9A2C]]Upgrade
+Element OS. This ensures that you get the latest features of the NetApp
+HCI storage infrastructure .
++
+See the NetApp SolidFire Element OS 10.3 User Guide for Element OS
+upgrade instructions.
+
+[[GUID-140DE799-CE64-47A7-BB77-57585443FA16_d72.html]]
+
+Chapter 8. Web browser support
+------------------------------
+
+NetApp HCI supports the most commonly used web browsers on several
+platforms.
+
+[[GUID-140DE799-CE64-47A7-BB77-57585443FA16_d72.html#GUID-140DE799-CE64-47A7-BB77-57585443FA16__GUID-50EFF13D-EEE3-4703-9FDC-730801283351]]
+[cols=",",options="header",]
+|=======================================================================
+|Web Browser |Operating system
+|Google Chrome 56 and later |Apple macOS, Microsoft Windows, Ubuntu
+Linux LTS
+
+|Mozilla Firefox 52 and later |Apple macOS, Microsoft Windows, Ubuntu
+Linux LTS
+
+|Microsoft Edge 38 and later |Microsoft Windows
+|=======================================================================
+
+[[GUID-19891990-DD2C-4E7F-9B6D-2ACB5158EB31_d73.html]]
+
+Chapter 9. Known and resolved issues and other documentation
+------------------------------------------------------------
+
+The NetApp Support Site contains details about the known and resolved
+issues for this release, as well as other product documentation. The
+NetApp HCI Documentation Center contains documentation for NetApp HCI in
+an easily searchable format.
+
+For NetApp HCI documentation, see the
+http://docs.netapp.com/hci/index.jsp[NetApp HCI Documentation Center].
+For known and resolved issues, see the
+https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62542[NetApp
+Support Site].
+
+[[GUID-377F6296-4AEC-415D-9153-005CE4FF88EA_d74.html]]
+
+Chapter 10. Contacting Support for NetApp HCI
+---------------------------------------------
+
+If you need help or have questions or comments about NetApp HCI, contact
+NetApp Support:
+
+* [[GUID-377F6296-4AEC-415D-9153-005CE4FF88EA_d74.html#GUID-377F6296-4AEC-415D-9153-005CE4FF88EA__LI_0293B8F0925E44DC9E675224C2520253]]Web:
+http://mysupport.netapp.com[mysupport.netapp.com]
+* [[GUID-377F6296-4AEC-415D-9153-005CE4FF88EA_d74.html#GUID-377F6296-4AEC-415D-9153-005CE4FF88EA__LI_14209871113E4C86B8E51B6821729927]]Phone:
+888.4.NETAPP (888.463.8277)
+
+[[GUID-A434538D-3FD7-491E-9F29-7A3F17E7CA9B_d75.html]]
+
+Copyright information
+---------------------
+
+[[GUID-A434538D-3FD7-491E-9F29-7A3F17E7CA9B_d75.html#GUID-A434538D-3FD7-491E-9F29-7A3F17E7CA9B__GUID-B26EC8DB-EFF1-4298-9CAF-25BA7D56D085]]
+Copyright © 2018 NetApp, Inc. All rights reserved. Printed in the U.S.
+
+No part of this document covered by copyright may be reproduced in any
+form or by any means—graphic, electronic, or mechanical, including
+photocopying, recording, taping, or storage in an electronic retrieval
+system—without prior written permission of the copyright owner.
+
+Software derived from copyrighted NetApp material is subject to the
+following license and disclaimer:
+
+THIS SOFTWARE IS PROVIDED BY NETAPP "AS IS" AND WITHOUT ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE,
+WHICH ARE HEREBY DISCLAIMED. IN NO EVENT SHALL NETAPP BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+NetApp reserves the right to change any products described herein at any
+time, and without notice. NetApp assumes no responsibility or liability
+arising from the use of products described herein, except as expressly
+agreed to in writing by NetApp. The use or purchase of this product does
+not convey a license under any patent rights, trademark rights, or any
+other intellectual property rights of NetApp.
+
+The product described in this manual may be protected by one or more
+U.S. patents, foreign patents, or pending applications.
+
+RESTRICTED RIGHTS LEGEND: Use, duplication, or disclosure by the
+government is subject to restrictions as set forth in subparagraph
+(c)(1)(ii) of the Rights in Technical Data and Computer Software clause
+at DFARS 252.277-7103 (October 1988) and FAR 52-227-19 (June 1987).
+
+[[GUID-FFD19F77-EEF8-4346-87E0-6695EE7ED0B9_d76.html]]
+
+Trademark information
+---------------------
+
+[[GUID-FFD19F77-EEF8-4346-87E0-6695EE7ED0B9_d76.html#GUID-FFD19F77-EEF8-4346-87E0-6695EE7ED0B9__GUID-8252AC68-A5B4-4EB2-8D54-C5B1B42963AE]]
+NETAPP, the NETAPP logo, and the marks listed on the NetApp Trademarks
+page are trademarks of NetApp, Inc. Other company and product names may
+be trademarks of their respective owners.
+
+http://www.netapp.com/us/legal/netapptmlist.aspx
+
+[[GUID-8CF1701B-884C-4AB5-8A89-6F29DE98B43B_d77.html]]
+
+How to send comments about documentation and receive update
+notifications
+-------------------------------------------------------------------------
+
+You can help us to improve the quality of our documentation by sending
+us your feedback. You can receive automatic notification when
+production-level (GA/FCS) documentation is initially released or
+important changes are made to existing production-level documents.
+
+If you have suggestions for improving this document, send us your
+comments by email.
+
+doccomments@netapp.com
+
+To help us direct your comments to the correct division, include in the
+subject line the product name, version, and operating system.
+
+If you want to be notified automatically when production-level
+documentation is released or important changes are made to existing
+production-level documents, follow Twitter account @NetAppDoc.
+
+[[GUID-8CF1701B-884C-4AB5-8A89-6F29DE98B43B_d77.html#GUID-8CF1701B-884C-4AB5-8A89-6F29DE98B43B__GUID-D5CD566C-F7AA-4F80-9774-A5DBE7F140AC]]
+You can also contact us in the following ways:
+
+* [[GUID-8CF1701B-884C-4AB5-8A89-6F29DE98B43B_d77.html#GUID-8CF1701B-884C-4AB5-8A89-6F29DE98B43B__LI_A13F498D7A244999A7AB88FDF3443122]]NetApp,
+Inc., 495 East Java Drive, Sunnyvale, CA 94089 U.S.
+* [[GUID-8CF1701B-884C-4AB5-8A89-6F29DE98B43B_d77.html#GUID-8CF1701B-884C-4AB5-8A89-6F29DE98B43B__LI_24C8754B66224B11A8ECA9AAB17DCF28]]Telephone:
++1 (408) 822-6000
+* [[GUID-8CF1701B-884C-4AB5-8A89-6F29DE98B43B_d77.html#GUID-8CF1701B-884C-4AB5-8A89-6F29DE98B43B__LI_9F2CA16756694409B27EABCF0B9A7C62]]Fax:
++1 (408) 822-4501
+* [[GUID-8CF1701B-884C-4AB5-8A89-6F29DE98B43B_d77.html#GUID-8CF1701B-884C-4AB5-8A89-6F29DE98B43B__LI_6DCDA230A68F4B709DA8194F8CF251E8]]Support
+telephone: +1 (888) 463-8277
